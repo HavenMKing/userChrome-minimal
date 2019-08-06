@@ -22,7 +22,7 @@ toolbarbutton#alltabs-button {
 }
 
 #urlbar {
-  border: 0px solid transparent !important;
+  border: 0px solid none !important;
   border-radius: 0px !important;
   margin: 0px !important;
   min-height: 30px !important;
@@ -30,4 +30,69 @@ toolbarbutton#alltabs-button {
 
 #TabsToolbar {
   height: 30px;
+  border-bottom: 0px none !important;
+  --toolbox-border-bottom-color: none !important;
+}
+
+:root {
+  --chrome-content-separator-color: none !important;
+  --tabs-border: none !important;
+  --toolbarbutton-border-radius: var(--button-radius) !important;
+}
+
+.titlebar-placeholder[type="pre-tabs"],
+.titlebar-placeholder[type="post-tabs"] {
+  display:none !important;
+}
+
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+   border-left: none !important;
+}
+
+#urlbar, .searchbar-textbox {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#nav-bar {
+	margin-top: 0px !important;
+	border-top: 0px !important;
+	box-shadow: none !important;
+}
+.tab-background {
+	border-top: none !important;
+}
+
+#tabbrowser-tabs {
+	--tab-line-color: none !important;
+  --tab-loading-fill: -moz-win-accentcolor !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#TabsToolbar, .tabbrowser-tab {
+  height: 30px !important;
+}
+
+#TabsToolbar .tabbrowser-tab .tab-line {
+  display: none !important;
+}
+
+/* Tab close button behavior */
+.tabbrowser-tab .tab-close-button {
+	-moz-box-ordinal-group: 0 !important;
+	margin: 0px 5px 0px -2px !important;
+}
+
+.tabbrowser-tab .tab-close-button {
+	display: none !important;
+}
+
+.tabbrowser-tab:not([pinned="true"]):hover .tab-icon-image,
+.tabbrowser-tab:not([pinned="true"]):hover .tab-throbber {
+	display: none;
+}
+
+.tabbrowser-tab:not([pinned="true"]):hover .tab-close-button {
+	display: -moz-box !important;
 }
