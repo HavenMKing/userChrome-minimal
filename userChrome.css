@@ -1,0 +1,33 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+toolbarbutton#alltabs-button {
+    -moz-binding: url("userChrome.xml#js");
+}
+
+
+:root:not([customizing]) #navigator-toolbox #nav-bar {
+	min-height: 0!important;
+	max-height: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: 100;
+}
+
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar {
+  padding: 0px !important;
+  margin-top: -30px !important;
+  max-height: 30px !important;
+  min-height: 30px !important;
+	height: 30px !important;
+}
+
+#urlbar {
+  border: 0px solid transparent !important;
+  border-radius: 0px !important;
+  margin: 0px !important;
+  min-height: 30px !important;
+}
+
+#TabsToolbar {
+  height: 30px;
+}
